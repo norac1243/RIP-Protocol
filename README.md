@@ -154,8 +154,7 @@ we find the network address by performing AND operation on binary forms of
 - on performing and operation you get, 192.168.1.248
 
 
-
-## For Router 1, we have 3 ports in use (se 2/0, se 3/0):
+## For Router 1, we have 2 ports in use (se 2/0, se 3/0):
 1. Then we have se2/0: in my case its connected to  192.168.1.250/30
 we find the network address by performing AND operation on binary forms of
 - 192.168.1.250
@@ -181,4 +180,13 @@ we find the network address by performing AND operation on binary forms of
 - 255.255.255.252 
 - on performing and operation you get, 192.168.1.240
 
+# STEP8: Simulation of RIP
 
+Basically, RIP protocol uses the path / route that has the least number of hops to get from the source to the destination. To get from PC0 to PC1, we have two routes:
+Route1: PC0 <=> Router0 <=> Router2 <=> PC1
+Route2: PC0 <=> Router0 <=> Router1 <=> Router2 <=> PC1
+Route1 has lesser number of hops compared to Route2.
+Hence when we simulate the packet transmission from PC0 to PC1, it should take Route1.
+On removing Route1, RIP protocol chooses route2 to transmit packets from PC0 to PC1 since no other route exists
+
+# When Simulation fails, what can we do to fix it?
