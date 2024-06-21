@@ -134,3 +134,51 @@ Router1:</br>
 Router2:</br>
 ![rip r2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%208%20router2.JPG)</br>
 
+
+The question arises in how we determine the networks for each of these routers.
+For this we will be doing and operations.
+
+## For Router 0, we have 3 ports in use (fa0/0, se 2/0, se 3/0):
+1. We have fa0/0: 10.0.0.1 having subnet address of 255.0.0.0
+we find the first network address by performing on an AND operation on the binary forms of 10.0.0.1 and 255.0.0.0, which gives ya 10.0.0.0
+2. Then we have se2/0: in my case its connected to  192.168.1.254/30
+we find the network address by performing AND operation on binary forms of
+- 192.168.1.254
+- 255.255.255.252 (the subnet mask here is represented by 30, which in ip address form is 11111111.11111111.
+11111111.11111100, which has a total of thirty 1s. convert this ip address to binary and you will get 255.255.255.252)
+- on performing and operation you get, 192.168.1.252
+3. Then we have se3/0: in my case its connected to  192.168.1.249/30
+we find the network address by performing AND operation on binary forms of
+- 192.168.1.249
+- 255.255.255.252 
+- on performing and operation you get, 192.168.1.248
+
+
+
+## For Router 1, we have 3 ports in use (se 2/0, se 3/0):
+1. Then we have se2/0: in my case its connected to  192.168.1.250/30
+we find the network address by performing AND operation on binary forms of
+- 192.168.1.250
+- 255.255.255.252
+- on performing and operation you get, 192.168.1.248
+2. Then we have se3/0: in my case its connected to  192.168.1.246/30
+we find the network address by performing AND operation on binary forms of
+- 192.168.1.246
+- 255.255.255.252 
+- on performing and operation you get, 192.168.1.240
+
+## For Router 2, we have 3 ports in use (fa0/0, se 2/0, se 3/0):
+1. We have fa0/0: 20.0.0.1 having subnet address of 255.0.0.0
+we find the first network address by performing on an AND operation on the binary forms of 20.0.0.1 and 255.0.0.0, which gives ya 20.0.0.0
+2. Then we have se2/0: in my case its connected to  192.168.1.253/30
+we find the network address by performing AND operation on binary forms of
+- 192.168.1.253
+- 255.255.255.252 
+- on performing and operation you get, 192.168.1.252
+3. Then we have se3/0: in my case its connected to  192.168.1.245/30
+we find the network address by performing AND operation on binary forms of
+- 192.168.1.245
+- 255.255.255.252 
+- on performing and operation you get, 192.168.1.240
+
+
