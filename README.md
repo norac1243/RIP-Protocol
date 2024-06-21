@@ -4,31 +4,40 @@ RIP protocol for MCN SEM 6 RC19-20
 # Table of Contents
 
 # Network Topology Diagram 
-
-STEP1: Build the topology as seen in the above diagram.
-Note the Network Devices being used are
-- Generic (Router-PT)
-- Generic (PC-PT)
-Also set the Preferences to show port labels. This does help while assigning ip addresses to each port.
+![topology](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/1st%20network%20topo.JPG)
+# BEST PRACTICES:
+## Set the Preferences to show port labels. 
+This does help while assigning ip addresses to each port.
 To navigate to preferences, either,
 1. click on Options and then Preferences
 2. Ctrl+R
 Choose "Always Show Port Labels"
-STEP2: Statically Assign the IP address and Subnet Mask for the PCs
+![preferences](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/2%20preferences.JPG)
+##
+
+# STEP1: Build the topology as seen in the above diagram.
+Note the Network Devices being used are
+- Generic (Router-PT)
+- Generic (PC-PT)
+
+# STEP2: Statically Assign the IP address and Subnet Mask for the PCs
 Accoridng to the diagram,
 PC0 takes IP address: 10.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)
 PC1 takes IP address: 20.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)
 To assign this, click on the PC icon > Desktop tab > IP Configuration.
 Assign as below:
-
+![PC0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC0.JPG)
+![PC1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC1.JPG)
 After assigning any IP address to any port or device, its best to label the port using the label icon present top
-see best practices.
+see [best practices](#best-practices). 
 
-STEP3: Statically Assign the IP address of Fast Ethernet 0/0 port for both PC0 and PC1
+# STEP3: Statically Assign the IP address of Fast Ethernet 0/0 port for both PC0 and PC1
 Fast Ethernet 0/0 or Fa0/0 is the port in your router that connects to a PC. 
 Hence we can set it up for both Router0 and Router1 connected to PC0 and PC1 respectively.
 Click on Router0 and then on CLI. 
 Type in below::
+![Router0 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router%200%20ip%20set%20fa00.JPG)
+Explanation::
 1. First type in no / n to exit configuration dialog
 2. Then press Enter key (=Return)
 3. Type in "en" (short) or "enable" (full) 
@@ -46,8 +55,9 @@ By either typing,
 
 That's it!
 Do the same for router2 set for fa0/0, IP address as 20.0.0.0.1 with subnet mask, 255.0.0.0 
+![Router 2 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router2%20ip%20set%20fa00.JPG)
 
-SERIAL PORTS:
+# SERIAL PORTS:
 Note that each Router can connect to another Router, (int the case of Router-PT) via serial ports.
 These serial ports are 
 1. Serial 2/0 
@@ -61,7 +71,7 @@ To find out which of your ports are DCE and which is DTE, you can either:
 2. Use a command, "show controller serial 2/0" (replace 2/0 by 3/0 for serial 3/0)
 note: this command does not work in global configuration mode. So if you are in global configuration mode, get out of it by either using "exit" or Ctrl+C
 
-STEP4: Assign IP addresses for each of the Router 0
+# STEP4: Assign IP addresses for each of the Router 0
 
 For Router0, accrding to the diagram___________, 
 1. its serial port, on the line connecting router0 and router2, has IP address: 192.168.1.254/30
@@ -91,7 +101,7 @@ In my case this port is DCE serial 3/0.
 Type in commands: ________________
 
 
-STEP5: Assign IP addresses for each of the Router 1
+# STEP5: Assign IP addresses for each of the Router 1
 For Router1, accrding to the diagram___________, 
 1. its serial port, on the line connecting router0 and router1, has IP address: 192.168.1.250/30
 For me its a DTE serial 2/0 port, so I typed in commands
@@ -101,7 +111,7 @@ __________
 For me its a DTE serial 3/0 port, so I typed in commands
 __________
 
-STEP6: Assign IP addresses for each of the Router 2
+# STEP6: Assign IP addresses for each of the Router 2
 1. its serial port, on the line connecting router0 and router2, has IP address: 192.168.1.253/30
 2. its serial port, on the line connecting router1 and router2, has IP address: 192.168.1.245/30
 
