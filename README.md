@@ -21,24 +21,24 @@ Note the Network Devices being used are
 - Generic (PC-PT)
 
 # STEP2: Statically Assign the IP address and Subnet Mask for the PCs
-Accoridng to the diagram,
-PC0 takes IP address: 10.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)
-PC1 takes IP address: 20.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)
-To assign this, click on the PC icon > Desktop tab > IP Configuration.
-Assign as below:
-![PC0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC0.JPG)
-![PC1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC1.JPG)
+Accoridng to the diagram,</br>
+PC0 takes IP address: 10.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</br>
+PC1 takes IP address: 20.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</br>
+To assign this, click on the PC icon > Desktop tab > IP Configuration.</br>
+Assign as below:</br>
+![PC0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC0.JPG)</br>
+![PC1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC1.JPG)</br>
 After assigning any IP address to any port or device, its best to label the port using the label icon present top
 see [best practices](#best-practices). 
 
 # STEP3: Statically Assign the IP address of Fast Ethernet 0/0 port for both PC0 and PC1
-Fast Ethernet 0/0 or Fa0/0 is the port in your router that connects to a PC. 
-Hence we can set it up for both Router0 and Router1 connected to PC0 and PC1 respectively.
+Fast Ethernet 0/0 or Fa0/0 is the port in your router that connects to a PC.</br> 
+Hence we can set it up for both Router0 and Router1 connected to PC0 and PC1 respectively.</br></br>
 Click on Router0 and then on CLI. 
-Type in below::
-![Router0 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router%200%20ip%20set%20fa00.JPG)
-Explanation::
-1. First type in no / n to exit configuration dialog
+Type in below::</br>
+![Router0 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router%200%20ip%20set%20fa00.JPG)</br>
+Explanation::</br>
+1. First type in no / n to exit configuration dialog</br>
 2. Then press Enter key (=Return)
 3. Type in "en" (short) or "enable" (full) 
 4. Enter global configuration mode by typing in  "conf t" (short) or "configure terminal" (full) 
@@ -52,9 +52,9 @@ By either typing,
 "no shut" (short)
 "no shutdown" (full)
 8. Type in "exit" to get out off fa0/0
-
-That's it!
-Do the same for router2 set for fa0/0, IP address as 20.0.0.0.1 with subnet mask, 255.0.0.0 
+</br></br>
+That's it!</br>
+Do the same for router2 set for fa0/0, IP address as 20.0.0.0.1 with subnet mask, 255.0.0.0 </br>
 ![Router 2 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router2%20ip%20set%20fa00.JPG)
 
 # SERIAL PORTS:
@@ -62,10 +62,10 @@ Note that each Router can connect to another Router, (int the case of Router-PT)
 These serial ports are 
 1. Serial 2/0 
 2. Serial 3/0
-By labelling the ports, you will now see the ports highlighted as Se2/0 (for Serial 2/0) and Se3/0 (for Serial 3/0).
+By labelling the ports, you will now see the ports highlighted as Se2/0 (for Serial 2/0) and Se3/0 (for Serial 3/0).</br></br>
 These serial ports can either be DCE or DTE.
 1. For DCE, It requires clock rate and bandwidth to be set.
-2. DTE, It doesnt require clock rate and bandwidth to be set.
+2. DTE, It doesnt require clock rate and bandwidth to be set.</br></br>
 To find out which of your ports are DCE and which is DTE, you can either:
 1. Label your ports as shown here. DCE ports are labelled by a clock.
 2. Use a command, "show controller serial 2/0" (replace 2/0 by 3/0 for serial 3/0)
@@ -73,11 +73,12 @@ note: this command does not work in global configuration mode. So if you are in 
 
 # STEP4: Assign IP addresses for each of the Router 0
 
-For Router0, accrding to the diagram___________, 
-1. its serial port, on the line connecting router0 and router2, has IP address: 192.168.1.254/30
+For Router0, accrding to the [diagram](##network-topology-diagram) 
+
+I. its serial port, on the line connecting router0 and router2, has IP address: 192.168.1.254/30
 To set IP address:
 1. First check what kind of port this is. For me its a DCE serial 2/0. For you, instead of this it can be DCE serial 3/0, DTE serial 2/0 or DTE serial 3/0 . So properly note that before proceeding.
-___________
+[SHOW](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/router%20show%20step%2044444.JPG)
 2. Since mine is a DCE serial 2/0, I do the following commands. Some commands are marked "Only for DCE". These commands need not be implemented for DTE.
 __________________
 [1] Enter global configuration mode by typing in  "conf t" (short) or "configure terminal" (full) 
@@ -102,7 +103,7 @@ Type in commands: ________________
 
 
 # STEP5: Assign IP addresses for each of the Router 1
-For Router1, accrding to the diagram___________, 
+For Router1, accrding to the [diagram](##network-topology-diagram),
 1. its serial port, on the line connecting router0 and router1, has IP address: 192.168.1.250/30
 For me its a DTE serial 2/0 port, so I typed in commands
 __________
@@ -112,6 +113,7 @@ For me its a DTE serial 3/0 port, so I typed in commands
 __________
 
 # STEP6: Assign IP addresses for each of the Router 2
+For Router2, accrding to the [diagram](##network-topology-diagram),
 1. its serial port, on the line connecting router0 and router2, has IP address: 192.168.1.253/30
 2. its serial port, on the line connecting router1 and router2, has IP address: 192.168.1.245/30
 
