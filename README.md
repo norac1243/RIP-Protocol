@@ -124,13 +124,13 @@ For Router2, accrding to the [diagram](##network-topology-diagram),</br>
    ![6.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%206%20substep%20code%202.JPG)</br>
 
 # STEP7:Configure RIP Protocol</br>
-1. For this one should get into global configuration mode first, that's by "conf t"
-2. Then "router rip"
-3. Then add the respective networks for each router 
-Router 0:
-![rip r0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%208%20router0.JPG)
-Router1:
-![rip r1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%208%20router1.JPG)
-Router2:
-![rip r2]()
+1. For this one should get into global configuration mode first, that's by "conf t"</br>
+2. Then "router rip"</br>
+3. Then add the respective networks for each router </br>
+Router 0:</br>
+![rip r0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%208%20router0.JPG)</br>
+Router1:</br>
+![rip r1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%208%20router1.JPG)</br>
+Router2:</br>
+![rip r2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%208%20router2.JPG)</br>
 
