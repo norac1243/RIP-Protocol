@@ -2,6 +2,18 @@
 RIP protocol for MCN SEM 6 RC19-20 </br>
 
 # Table of Contents
+1.[Network](#network-topology-diagram)
+2.[Best Practices](#best-practices)
+3.[Understanding Of Serial Ports](#serial-ports)
+4.Steps in RIP
+- 4.1[](#step1-build-the-topology-as-seen-in-the-above-diagram)
+- 4.2[](#step2-statically-assign-the-ip-address-and-subnet-mask-for-the-pcs)
+- 4.3[](step3-statically-assign-the-ip-address-of-fast-ethernet-00-port-for-both-pc0-and-pc1)
+- 4.4[]()
+- 4.5[]()
+- 4.6[]()
+- 4.7[]()
+- 4.8[]()
 
 # Network Topology Diagram 
 ![topology DIAGRAM](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/Network%20topology%20diagram.jpg)
@@ -57,6 +69,8 @@ That's it!</br>
 Do the same for router2 set for fa0/0, IP address as 20.0.0.0.1 with subnet mask, 255.0.0.0 </br>
 ![Router 2 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router2%20ip%20set%20fa00.JPG)</br>
 
+# STEP4: Statically Assign the Default Gateway
+
 # SERIAL PORTS:
 Note that each Router can connect to another Router, (int the case of Router-PT) via serial ports.</br>
 These serial ports are </br>
@@ -71,7 +85,7 @@ To find out which of your ports are DCE and which is DTE, you can either:</br>
 2. Use a command, "show controller serial 2/0" (replace 2/0 by 3/0 for serial 3/0)</br>
 note: this command does not work in global configuration mode. So if you are in global configuration mode, get out of it by either using "exit" or Ctrl+C</br>
 
-# STEP4: Assign IP addresses for each of the Router 0
+# STEP5: Assign IP addresses for each of the Router 0
 </br>
 For Router0, accrding to the [diagram](##network-topology-diagram) 
 </br>
@@ -104,7 +118,7 @@ In my case this port is DCE serial 3/0.</br>
 Type in commands:</br>
 ![4.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%204%20substep%20code%202.JPG)</br>
 
-# STEP5: Assign IP addresses for each of the Router 1
+# STEP6: Assign IP addresses for each of the Router 1
 For Router1, accrding to the [diagram](##network-topology-diagram),</br>
 1. its serial port, on the line connecting router0 and router1, has IP address: 192.168.1.250/30</br>
 For me its a DTE serial 2/0 port, so I typed in commands</br>
@@ -114,7 +128,7 @@ For me its a DTE serial 2/0 port, so I typed in commands</br>
 For me its a DTE serial 3/0 port, so I typed in commands</br>
 ![5.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%205%20substep%20code%202.JPG)</br>
 
-# STEP6: Assign IP addresses for each of the Router 2</br>
+# STEP7: Assign IP addresses for each of the Router 2</br>
 For Router2, accrding to the [diagram](##network-topology-diagram),</br>
 1. its serial port, on the line connecting router0 and router2, has IP address: 192.168.1.253/30</br>
    For me its a DTE serial 2/0 port, so I typed in commands</br>
@@ -123,7 +137,7 @@ For Router2, accrding to the [diagram](##network-topology-diagram),</br>
    For me its a DCE serial 3/0 port, so I typed in commands</br>
    ![6.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%206%20substep%20code%202.JPG)</br>
 
-# STEP7:Configure RIP Protocol</br>
+# STEP8:Configure RIP Protocol</br>
 1. For this one should get into global configuration mode first, that's by "conf t"</br>
 2. Then "router rip"</br>
 3. Then add the respective networks for each router </br>
@@ -180,7 +194,7 @@ we find the network address by performing AND operation on binary forms of
 - 255.255.255.252 
 - on performing and operation you get, 192.168.1.240
 
-# STEP8: Simulation of RIP
+# STEP9: Simulation of RIP
 
 Basically, RIP protocol uses the path / route that has the least number of hops to get from the source to the destination. To get from PC0 to PC1, we have two routes:
 Route1: PC0 <=> Router0 <=> Router2 <=> PC1
