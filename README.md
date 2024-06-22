@@ -214,30 +214,34 @@ On removing Route1, RIP protocol chooses route2 to transmit packets from PC0 to 
 To simulate,enter Simulation Mode in the Bottom Right Corner (blue arrow).</br>
 Click the Envelope Icon and then click on PC0 and PC1 (red arrow)
 </br>In the Simulation Panel, Edit Filters, Click ICMP under IPv4
-</br> Then in play controls click capture forward to see the packet traverse route1. 
+</br> Then in play controls click capture forward to see the packet traverse route1. </br>
 at the end of it you should get an event list encircled in pink below and the successful status message highlighted by yellow arrow. 
+</br>
+![sim route1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/simulation%20pic1.png)
+
 
 </br>
 Now get rid of the connection line between router0 and router2. 
 </br>
 Click the Envelope Icon and then click on PC0 and PC1
 </br>
-There is only one route in this case, that is route2, so the packets have no choice but to choose that route. 
+There is only one route in this case, that is route2, so the packets have no choice but to choose that route. </br>
+![sim route2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/simulation%20pic2.JPG)
 
 # When Simulation fails, what can we do to fix it?
-Normally packet simulation doesn't work the first time. So try doing it two times more.That is the same step of clicking the Envelope Icon and then click on PC0 and PC1. 
-If that doesn't work,check if you've entered the proper IP address for each device.
-click on a device and then click Config and check each port address. Also check the gateways of the PCs. 
-On confirming correct port address, simulate once more. 
-if that fails again, test the working of the individual connection lines. 
-That is, Click the Envelope Icon and then click:
-1. PC0 and Router0
-2. PC1 and Router1
-3. Router0 and Router1
-4. Router0 and Router2
-and so on and so forth. 
-if any of these connections fail, that means that there is an error in the 8th step,[Configure RIP](#step8configure-rip-protocol). If you have by mistake added a wrong network,make sure you are config mode and then after typing router rip you can type in this command to remove the wrong network is:
-no network 20.0.0.0 
-where 20.0.0.0 can be understood as any wrong network. 
-
+Normally packet simulation doesn't work the first time. So try doing it two times more.That is the same step of clicking the Envelope Icon and then click on PC0 and PC1. </br></br></br>
+If that doesn't work,check if you've entered the proper IP address for each device.</br>
+click on a device and then click Config and check each port address. Also check the gateways of the PCs. </br>
+On confirming correct port address, simulate once more. </br></br></br>
+if that fails again, test the working of the individual connection lines. </br>
+That is, Click the Envelope Icon and then click:</br>
+1. PC0 and Router0</br>
+2. PC1 and Router1</br>
+3. Router0 and Router1</br>
+4. Router0 and Router2</br>
+and so on and so forth. </br></br></br>
+if any of these connections fail, that means that there is an error in the 8th step,[Configure RIP](#step8configure-rip-protocol). If you have by mistake added a wrong network,make sure you are config mode and then after typing router rip you can type in this command to remove the wrong network is:</br>
+"no network 20.0.0.0"</br>
+where 20.0.0.0 can be understood as any wrong network. </br>
+</br>
 Test again. it should work. 
