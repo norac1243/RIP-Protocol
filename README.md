@@ -2,19 +2,20 @@
 RIP protocol for MCN SEM 6 RC19-20 </br>
 
 # Table of Contents
-1.[Network](#network-topology-diagram)
-2.[Best Practices](#best-practices)
-3.[Understanding Of Serial Ports](#serial-ports)
-4.Steps in RIP
-- 4.1[](#step1-build-the-topology-as-seen-in-the-above-diagram)
-- 4.2[](#step2-statically-assign-the-ip-address-and-subnet-mask-for-the-pcs)
-- 4.3[](step3-statically-assign-the-ip-address-of-fast-ethernet-00-port-for-both-pc0-and-pc1)
-- 4.4[]()
-- 4.5[]()
-- 4.6[]()
-- 4.7[]()
-- 4.8[]()
-
+1.[Network](#network-topology-diagram)</br>
+2.[Best Practices](#best-practices)</br>
+3.[Understanding Of Serial Ports](#serial-ports)</br>
+4.Steps in RIP</br>
+- 4.1[Build Network Topology](#step1-build-the-topology-as-seen-in-the-above-diagram)
+- 4.2[Assign IP address for the PCs)](#step2-statically-assign-the-ip-address-and-subnet-mask-for-the-pcs)
+- 4.3[Assign fa0/0 address for the Routers](step3-statically-assign-the-ip-address-of-fast-ethernet-00-port-for-both-pc0-and-pc1)
+- 4.4[Assign Default Gateway for the PCs)](#step4-statically-assign-the-default-gateway)
+- 4.5[Assign IP address for serial ports of Router0](#step5-assign-ip-addresses-for-each-of-the-router-0)
+- 4.6[Assign IP address for serial ports of Router1](#step6-assign-ip-addresses-for-each-of-the-router-1)
+- 4.7[Assign IP address for serial ports of Router2](#step7-assign-ip-addresses-for-each-of-the-router-2)
+- 4.8[Configure RIP](#step8configure-rip-protocol)
+- 4.8[Simulate Working of RIP(#step9-simulation-of-rip)
+5.[How to fix Simulation fails](#when-simulation-fails-what-can-we-do-to-fix-it)</br>
 # Network Topology Diagram 
 ![topology DIAGRAM](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/Network%20topology%20diagram.jpg)
 # BEST PRACTICES:
@@ -157,13 +158,13 @@ For this we will be doing and operations.
 we find the first network address by performing on an AND operation on the binary forms of 10.0.0.1 and 255.0.0.0, which gives ya 10.0.0.0
 2. Then we have se2/0: in my case its connected to  192.168.1.254/30
 we find the network address by performing AND operation on binary forms of
-- 192.168.1.254
+- 192.168.1.254 and
 - 255.255.255.252 (the subnet mask here is represented by 30, which in ip address form is 11111111.11111111.
-11111111.11111100, which has a total of thirty 1s. convert this ip address to binary and you will get 255.255.255.252)
+11111111.11111100, which has a total of thirty 1s. convert this ip address to decimal and you will get 255.255.255.252)
 - on performing and operation you get, 192.168.1.252
 3. Then we have se3/0: in my case its connected to  192.168.1.249/30
 we find the network address by performing AND operation on binary forms of
-- 192.168.1.249
+- 192.168.1.249 and
 - 255.255.255.252 
 - on performing and operation you get, 192.168.1.248
 
@@ -171,12 +172,12 @@ we find the network address by performing AND operation on binary forms of
 ## For Router 1, we have 2 ports in use (se 2/0, se 3/0):
 1. Then we have se2/0: in my case its connected to  192.168.1.250/30
 we find the network address by performing AND operation on binary forms of
-- 192.168.1.250
+- 192.168.1.250 and
 - 255.255.255.252
 - on performing and operation you get, 192.168.1.248
 2. Then we have se3/0: in my case its connected to  192.168.1.246/30
 we find the network address by performing AND operation on binary forms of
-- 192.168.1.246
+- 192.168.1.246 and
 - 255.255.255.252 
 - on performing and operation you get, 192.168.1.240
 
@@ -185,22 +186,27 @@ we find the network address by performing AND operation on binary forms of
 we find the first network address by performing on an AND operation on the binary forms of 20.0.0.1 and 255.0.0.0, which gives ya 20.0.0.0
 2. Then we have se2/0: in my case its connected to  192.168.1.253/30
 we find the network address by performing AND operation on binary forms of
-- 192.168.1.253
+- 192.168.1.253 and
 - 255.255.255.252 
 - on performing and operation you get, 192.168.1.252
 3. Then we have se3/0: in my case its connected to  192.168.1.245/30
 we find the network address by performing AND operation on binary forms of
-- 192.168.1.245
+- 192.168.1.245 and
 - 255.255.255.252 
 - on performing and operation you get, 192.168.1.240
 
 # STEP9: Simulation of RIP
 
-Basically, RIP protocol uses the path / route that has the least number of hops to get from the source to the destination. To get from PC0 to PC1, we have two routes:
-Route1: PC0 <=> Router0 <=> Router2 <=> PC1
-Route2: PC0 <=> Router0 <=> Router1 <=> Router2 <=> PC1
-Route1 has lesser number of hops compared to Route2.
-Hence when we simulate the packet transmission from PC0 to PC1, it should take Route1.
-On removing Route1, RIP protocol chooses route2 to transmit packets from PC0 to PC1 since no other route exists
+Basically, RIP protocol uses the path / route that has the least number of hops to get from the source to the destination. To get from PC0 to PC1, we have two routes:</br>
+Route1: PC0 <=> Router0 <=> Router2 <=> PC1</br>
+Route2: PC0 <=> Router0 <=> Router1 <=> Router2 <=> PC1</br>
+Route1 has lesser number of hops compared to Route2.</br>
+Hence when we simulate the packet transmission from PC0 to PC1, it should take Route1.</br>
+On removing Route1, RIP protocol chooses route2 to transmit packets from PC0 to PC1 since no other route exists</br>
+
+To simulate,enter Simulation Mode in the Bottom Right Corner.</br>
+Click the Envelope Icon and then click on PC0 and PC1
+The packet should traverse the 
 
 # When Simulation fails, what can we do to fix it?
+Normall
