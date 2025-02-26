@@ -88,28 +88,50 @@ After assigning any IP address to any port or device, its best to label the port
 see [best practices](#best-practices). </br>
 
 # STEP3: Statically Assign the IP address of Fast Ethernet 0/0 port for both PC0 and PC1
-Fast Ethernet 0/0 or Fa0/0 is the port in your router that connects to a PC.</br> 
-Hence we can set it up for both Router0 and Router1 connected to PC0 and PC1 respectively.</br></br>
-Click on Router0 and then on CLI. 
-Type in below::</br>
+NOTE: ⚠️
+<ul> <li>Fast Ethernet 0/0 or Fa0/0 is the port in your router that connects to a PC.</li>
+<li>Hence we can set it up for both Router0 and Router1 connected to PC0 and PC1 respectively.</li></ul>
+To be able to do tgus, Click on Router0 and then on CLI.</br> 
+Type in below:</br>
+
 ![Router0 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router%200%20ip%20set%20fa00.JPG)</br>
-Explanation::</br>
-1. First type in no / n to exit configuration dialog</br>
-2. Then press Enter key (=Return)</br>
-3. Type in "en" (short) or "enable" (full) </br>
-4. Enter global configuration mode by typing in  "conf t" (short) or "configure terminal" (full) </br>
-5. To set IP address of fa0/0 or FastEthernet0/0 we navigate to it by typing,</br>
- "int fa0/0" (short) or "int FastEthernet0/0 " (full) </br>
-6. Enter the IP address, that is, 10.0.0.0.1 with subnet mask, 255.0.0.0 (which is represented by /8)</br>
-By either typing,</br>
-"ip add 10.0.0.1 255.0.0.0"(short)</br>
-"ip address 10.0.0.1 255.0.0.0"(full)</br>
-7. Boot the port, that is change the state from down to up using command,</br>
-"no shut" (short)</br>
-"no shutdown" (full)</br>
-8. Type in "exit" to get out off fa0/0</br>
-</br></br>
-That's it!</br>
+### Explanation:
+
+<ol>
+    <li>First, type in <code>no</code> / <code>n</code> to exit the configuration dialog.</li>
+    <li>Press the <strong>Enter</strong> key (Return).</li>
+    <li>Type in <code>en</code> (short) or <code>enable</code> (full).</li>
+    <li>Enter global configuration mode by typing:
+        <ul>
+            <li><code>conf t</code> (short)</li>
+            <li><code>configure terminal</code> (full)</li>
+        </ul>
+    </li>
+    <li>To set the IP address of <code>fa0/0</code> (FastEthernet0/0), navigate to it by typing:
+        <ul>
+            <li><code>int fa0/0</code> (short)</li>
+            <li><code>int FastEthernet0/0</code> (full)</li>
+        </ul>
+    </li>
+    <li>Enter the IP address (<code>10.0.0.1</code>) with subnet mask (<code>255.0.0.0</code>, represented by <code>/8</code>) by typing:
+        <ul>
+            <li><code>ip add 10.0.0.1 255.0.0.0</code> (short)</li>
+            <li><code>ip address 10.0.0.1 255.0.0.0</code> (full)</li>
+        </ul>
+    </li>
+    <li>Boot the port (change the state from <strong>down</strong> to <strong>up</strong>) using the command:
+        <ul>
+            <li><code>no shut</code> (short)</li>
+            <li><code>no shutdown</code> (full)</li>
+        </ul>
+    </li>
+    <li>Type <code>exit</code> to exit <strong>fa0/0</strong>.</li>
+</ol>
+
+That's it!
+Do the same for router2 set for fa0/0, IP address as 20.0.0.0.1 with subnet mask, 255.0.0.0 </br>
+![Router 1 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router1%20ip%20set%20fa00.JPG)</br>
+
 Do the same for router2 set for fa0/0, IP address as 20.0.0.0.1 with subnet mask, 255.0.0.0 </br>
 ![Router 2 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router2%20ip%20set%20fa00.JPG)</br>
 
