@@ -50,7 +50,7 @@ Despite its limitations, RIP is still used in certain environments where simplic
 <li>4.8 <a href="#step8-configure-rip-protocol">Configure RIP</a></li>
 <li>4.9 <a href="#step9-simulation-of-rip">Simulate Working of RIP</a></li>
 </ul>
-5.[How to fix Simulation Fails?](#when-simulation-fails-what-can-we-do-to-fix-it)
+5. <a href = "https://github.com/norac1243/RIP-Protocol/blob/main/README.md#when-simulation-fails-what-can-we-do-to-fix-it">How to fix Simulation Fails?</a>
 
 
 # Network Topology Diagram 
