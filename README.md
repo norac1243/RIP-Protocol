@@ -71,17 +71,18 @@ Note the Network Devices being used are</br>
 - Generic (PC-PT)</br>
 ![topology](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/1st%20network%20topo.JPG)</br>
 # STEP2: Statically Assign the IP address and Subnet Mask for the PCs
-Accoridng to the diagram,</br>
+Accordig to the diagram,</br>
 <ul>
  <li>PC0 takes IP address: 10.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</li>
  <li>PC1 takes IP address: 20.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</li>
 </ul>
-</br></br>
 To assign this, click on the PC icon > Desktop tab > IP Configuration.</br></br>
 Assign as below:</br>
 <b>FOR PC0:</b></br>
+
 ![PC0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC0.JPG)</br></br>
 <b>FOR PC1:</b></br>
+
 ![PC1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC1.JPG)</br></br>
 After assigning any IP address to any port or device, its best to label the port using the label icon present top
 see [best practices](#best-practices). </br>
