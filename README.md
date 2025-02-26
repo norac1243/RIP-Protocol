@@ -253,7 +253,7 @@ Click the Envelope Icon and then click on PC0 and PC1 (red arrow)
 </br> Then in play controls click capture forward to see the packet traverse route1. </br>
 at the end of it you should get an event list encircled in pink below and the successful status message highlighted by yellow arrow. 
 </br>
-![sim route1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/simulation%20pic1.png)
+![sim route1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/simulation-pic2.JPG)
 
 
 </br>
