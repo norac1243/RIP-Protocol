@@ -72,14 +72,16 @@ Note the Network Devices being used are</br>
 ![topology](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/1st%20network%20topo.JPG)</br>
 # STEP2: Statically Assign the IP address and Subnet Mask for the PCs
 Accoridng to the diagram,</br>
-PC0 takes IP address: 10.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</br>
-PC1 takes IP address: 20.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</br>
-To assign this, click on the PC icon > Desktop tab > IP Configuration.</br>
+- PC0 takes IP address: 10.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</br>
+- PC1 takes IP address: 20.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</br></br>
+To assign this, click on the PC icon > Desktop tab > IP Configuration.</br></br>
 Assign as below:</br>
-![PC0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC0.JPG)</br>
-![PC1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC1.JPG)</br>
+<b>FOR PC0:</b></br>
+![PC0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC0.JPG)</br></br>
+<b>FOR PC1:</b></br>
+![PC1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC1.JPG)</br></br>
 After assigning any IP address to any port or device, its best to label the port using the label icon present top
-see [best practices](#best-practices). 
+see [best practices](#best-practices). </br>
 
 # STEP3: Statically Assign the IP address of Fast Ethernet 0/0 port for both PC0 and PC1
 Fast Ethernet 0/0 or Fa0/0 is the port in your router that connects to a PC.</br> 
