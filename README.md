@@ -35,19 +35,19 @@ Despite its limitations, RIP is still used in certain environments where simplic
 
 
 # Table of Contents
-1.[Network](#network-topology-diagram)</br>
-2.[Best Practices](#best-practices)</br>
-3.[Understanding Of Serial Ports](#serial-ports)</br>
-4.Steps in RIP</br>
-- 4.1[Build Network Topology](#step1-build-the-topology-as-seen-in-the-above-diagram)
-- 4.2[Assign IP address for the PCs)](#step2-statically-assign-the-ip-address-and-subnet-mask-for-the-pcs)
-- 4.3[Assign fa0/0 address for the Routers](step3-statically-assign-the-ip-address-of-fast-ethernet-00-port-for-both-pc0-and-pc1)
-- 4.4[Assign Default Gateway for the PCs)](#step4-statically-assign-the-default-gateway)
-- 4.5[Assign IP address for serial ports of Router0](#step5-assign-ip-addresses-for-each-of-the-router-0)
-- 4.6[Assign IP address for serial ports of Router1](#step6-assign-ip-addresses-for-each-of-the-router-1)
-- 4.7[Assign IP address for serial ports of Router2](#step7-assign-ip-addresses-for-each-of-the-router-2)
-- 4.8[Configure RIP](#step8configure-rip-protocol)
-- 4.9[Simulate Working of RIP(#step9-simulation-of-rip)</br>
+1. [Network](#network-topology-diagram)</br>
+2. [Best Practices](#best-practices)</br>
+3. [Understanding Of Serial Ports](#serial-ports)</br>
+4. Steps in RIP</br>
+- 4.1 [Build Network Topology](#step1-build-the-topology-as-seen-in-the-above-diagram)
+- 4.2 [Assign IP address for the PCs)](#step2-statically-assign-the-ip-address-and-subnet-mask-for-the-pcs)
+- 4.3 [Assign fa0/0 address for the Routers](step3-statically-assign-the-ip-address-of-fast-ethernet-00-port-for-both-pc0-and-pc1)
+- 4.4 [Assign Default Gateway for the PCs)](#step4-statically-assign-the-default-gateway)
+- 4.5 [Assign IP address for serial ports of Router0](#step5-assign-ip-addresses-for-each-of-the-router-0)
+- 4.6 [Assign IP address for serial ports of Router1](#step6-assign-ip-addresses-for-each-of-the-router-1)
+- 4.7 [Assign IP address for serial ports of Router2](#step7-assign-ip-addresses-for-each-of-the-router-2)
+- 4.8 [Configure RIP](#step8configure-rip-protocol)
+- 4.9 [Simulate Working of RIP(#step9-simulation-of-rip)</br>
 
 5.[How to fix Simulation fails](#when-simulation-fails-what-can-we-do-to-fix-it)</br>
 # Network Topology Diagram 
@@ -178,7 +178,7 @@ For Router2, accrding to the [diagram](##network-topology-diagram),</br>
    For me its a DCE serial 3/0 port, so I typed in commands</br>
    ![6.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%206%20substep%20code%202.JPG)</br>
 
-# STEP8:Configure RIP Protocol</br>
+# STEP8: Configure RIP Protocol</br>
 1. For this one should get into global configuration mode first, that's by "conf t"</br>
 2. Then "router rip"</br>
 3. Then add the respective networks for each router </br>
