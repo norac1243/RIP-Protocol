@@ -40,18 +40,19 @@ Despite its limitations, RIP is still used in certain environments where simplic
 3. [Understanding Of Serial Ports](#serial-ports)</br>
 4. Steps in RIP</br>
 <ul>
-<li>4.1 [Build Network Topology](#step1-build-the-topology-as-seen-in-the-above-diagram)</li>
+<li>4.1<a href = "#step1-build-the-topology-as-seen-in-the-above-diagram">Build Network Topology</a> </li>
 <li>4.2 <a href="#step2-statically-assign-the-ip-address-and-subnet-mask-for-the-pcs">Assign IP address for the PCs</a></li>
 <li>4.3 <a href="step3-statically-assign-the-ip-address-of-fast-ethernet-00-port-for-both-pc0-and-pc1">Assign fa0/0 address for the Routers</a></li>
 <li>4.4 <a href="#step4-statically-assign-the-default-gateway">Assign Default Gateway for the PCs</a></li>
 <li>4.5 <a href="#step5-assign-ip-addresses-for-each-of-the-router-0">Assign IP address for serial ports of Router0</a></li>
 <li>4.6 <a href="#step6-assign-ip-addresses-for-each-of-the-router-1">Assign IP address for serial ports of Router1</a></li>
 <li>4.7 <a href="#step7-assign-ip-addresses-for-each-of-the-router-2">Assign IP address for serial ports of Router2</a></li>
-<li>4.8 <a href="#step8configure-rip-protocol">Configure RIP</a></li>
+<li>4.8 <a href="#step8-configure-rip-protocol">Configure RIP</a></li>
 <li>4.9 <a href="#step9-simulation-of-rip">Simulate Working of RIP</a></li>
-
 </ul>
-5.[How to fix Simulation fails](#when-simulation-fails-what-can-we-do-to-fix-it)</br>
+5.[How to fix Simulation Fails?](#when-simulation-fails-what-can-we-do-to-fix-it)
+
+
 # Network Topology Diagram 
 ![topology DIAGRAM](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/Network%20topology%20diagram.jpg)
 # BEST PRACTICES:
