@@ -253,7 +253,7 @@ Click the Envelope Icon and then click on PC0 and PC1 (red arrow)
 </br> Then in play controls click capture forward to see the packet traverse route1. </br>
 at the end of it you should get an event list encircled in pink below and the successful status message highlighted by yellow arrow. 
 </br>
-![sim route1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/simulation-pic2.JPG)
+![sim route1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/simulation-pic1.JPG)
 
 
 </br>
@@ -262,7 +262,7 @@ Now get rid of the connection line between router0 and router2.
 Click the Envelope Icon and then click on PC0 and PC1
 </br>
 There is only one route in this case, that is route2, so the packets have no choice but to choose that route. </br>
-![sim route2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/simulation%20pic2.JPG)
+![sim route2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/simulation-pic2.JPG)
 
 # When Simulation fails, what can we do to fix it?
 Normally packet simulation doesn't work the first time. So try doing it two times more.That is the same step of clicking the Envelope Icon and then click on PC0 and PC1. </br></br></br>
