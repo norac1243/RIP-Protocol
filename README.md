@@ -72,8 +72,11 @@ Note the Network Devices being used are</br>
 ![topology](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/1st%20network%20topo.JPG)</br>
 # STEP2: Statically Assign the IP address and Subnet Mask for the PCs
 Accoridng to the diagram,</br>
-- PC0 takes IP address: 10.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</br>
-- PC1 takes IP address: 20.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</br></br>
+<ul>
+ <li>PC0 takes IP address: 10.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</li>
+ <li>PC1 takes IP address: 20.0.0.2, Subnet Mask: 255.0.0.0 (represented by /8)</li>
+</ul>
+</br></br>
 To assign this, click on the PC icon > Desktop tab > IP Configuration.</br></br>
 Assign as below:</br>
 <b>FOR PC0:</b></br>
