@@ -309,6 +309,6 @@ if any of these connections fail, that means that there is an error in the 8th s
 where 20.0.0.0 can be understood as any wrong network. </br>
 </br>
 Test again. it should work.
-# 
-<i>Your support is appreciated! If this project helps you, consider starring ⭐ it. Proper credit is requested for any reuse.</i>
 
+.....
+If you like this project, please consider starring ⭐ this repo on GitHub as it is the easiest and best way to support it.
