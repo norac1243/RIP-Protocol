@@ -21,7 +21,7 @@
 
 
 # Network Topology Diagram 
-![topology DIAGRAM](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/1st-network-topology.JPG)
+![topology-diagram-packet-tracer](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/1st-network-topology.JPG)
 
 # BEST PRACTICES:
 ## Set the Preferences to show port labels. </br>
@@ -30,14 +30,14 @@ To navigate to preferences, either,</br>
 1. click on Options and then Preferences</br>
 2. Ctrl+R</br>
 Choose "Always Show Port Labels"</br>
-![preferences](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/2%20preferences.JPG)</br>
+![2-preferences-always-show-port-labels](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/2-preferences-always-show-port-labels.JPG)</br>
 ## Label each port by its IP ADDRESS
-
+![2-preferences-label-icon](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/2-preferences-label-icon.JPG)</br>
 # STEP1: Build the topology as seen in the above diagram.
 Note the Network Devices being used are</br>
 - Generic (Router-PT)</br>
 - Generic (PC-PT)</br>
-![topology](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/1st%20network%20topo.JPG)</br>
+![topology-diagram-drawn](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/Network-topology-diagram.jpg)
 # STEP2: Statically Assign the IP address and Subnet Mask for the PCs
 Accordig to the diagram,</br>
 <ul>
@@ -48,10 +48,10 @@ To assign this, click on the PC icon > Desktop tab > IP Configuration.</br></br>
 Assign as below:</br>
 <b>FOR PC0:</b></br>
 
-![PC0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC0.JPG)</br></br>
+![PC0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/3-IP-Configuration-PC0.JPG)</br></br>
 <b>FOR PC1:</b></br>
 
-![PC1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20IP%20Configuration%20PC1.JPG)</br></br>
+![PC1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/3-IP-Configuration-PC1.JPG)</br></br>
 After assigning any IP address to any port or device, its best to label the port using the label icon present top
 see [best practices](#best-practices). </br>
 
@@ -62,7 +62,7 @@ NOTE: ⚠️
 To be able to do tgus, Click on Router0 and then on CLI.</br> 
 Type in below:</br>
 
-![Router0 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router%200%20ip%20set%20fa00.JPG)</br>
+![Router0 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/3-Router0-ip-set-fa00.JPG)</br>
 ### Explanation:
 
 <ol>
@@ -98,10 +98,10 @@ Type in below:</br>
 
 That's it!
 Do the same for router2 set for fa0/0, IP address as 20.0.0.0.1 with subnet mask, 255.0.0.0 </br>
-![Router 1 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router1%20ip%20set%20fa00.JPG)</br>
+<!---![Router 1 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router1%20ip%20set%20fa00.JPG)</br>--->
 
 Do the same for router2 set for fa0/0, IP address as 20.0.0.0.1 with subnet mask, 255.0.0.0 </br>
-![Router 2 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/3%20Router2%20ip%20set%20fa00.JPG)</br>
+![Router 2 fa0/0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/3-Router2-ip-set-fa00.JPG)</br>
 
 # STEP4: Statically Assign the Default Gateway
 The default gateway in the PC is the IP address of the fa0/0 port of the router it's connected to. 
@@ -156,17 +156,17 @@ The commands are:</br>
 2. its serial port, on the line connecting router0 and router1, has IP address: 192.168.1.249/30</br>
 In my case this port is DCE serial 3/0.</br>
 Type in commands:</br>
-![4.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%204%20substep%20code%202.JPG)</br>
+![4.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/step-4-substep-code-2.JPG)</br>
 
 # STEP6: Assign IP addresses for each of the Router 1
 For Router1, accrding to the [diagram](##network-topology-diagram),</br>
 1. its serial port, on the line connecting router0 and router1, has IP address: 192.168.1.250/30</br>
 For me its a DTE serial 2/0 port, so I typed in commands</br>
-![5.1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%205%20substep%20code%201.JPG)</br>
+![5.1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/step-5-substep-code-1.JPG)</br>
 
 2. its serial port, on the line connecting router1 and router2, has IP address: 192.168.1.246/30</br>
 For me its a DTE serial 3/0 port, so I typed in commands</br>
-![5.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%205%20substep%20code%202.JPG)</br>
+![5.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/step-6-substep-code-2.JPG)</br>
 
 # STEP7: Assign IP addresses for each of the Router 2</br>
 For Router2, accrding to the [diagram](##network-topology-diagram),</br>
