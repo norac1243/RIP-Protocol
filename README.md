@@ -21,7 +21,8 @@
 
 
 # Network Topology Diagram 
-![topology DIAGRAM](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/Network%20topology%20diagram.jpg)
+![topology DIAGRAM](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/1st-network-topology.JPG)
+
 # BEST PRACTICES:
 ## Set the Preferences to show port labels. </br>
 This does help while assigning ip addresses to each port.</br>
