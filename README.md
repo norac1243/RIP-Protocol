@@ -132,10 +132,10 @@ For Router0, accrding to the [diagram](##network-topology-diagram)
 I. its serial port, on the line connecting router0 and router2, has IP address: 192.168.1.254/30</br>
 To set IP address:</br>
 1. First check what kind of port this is. For me its a DCE serial 2/0. For you, instead of this it can be DCE serial 3/0, DTE serial 2/0 or DTE serial 3/0 . So properly note that before proceeding.</br>
-![SHOW](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/router%20show%20step%2044444.JPG)</br>
+![SHOW](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/router-show-step-44444.JPG)</br>
 2. Since mine is a DCE serial 2/0, I do the following commands. Some commands are marked "Only for DCE". These commands need not be implemented for DTE.</br>
 Type in::</br>
-![4.1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%204%20substep%20code.JPG)</br>
+![4.1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/step-4-substep-code-1.JPG)</br>
 Explanation::</br>
 [1] Enter global configuration mode by typing in  "conf t" (short) or "configure terminal" (full) </br>
 [2] To set IP address of se2/0 (in my case) we navigate to it by typing,</br>
@@ -172,21 +172,21 @@ For me its a DTE serial 3/0 port, so I typed in commands</br>
 For Router2, accrding to the [diagram](##network-topology-diagram),</br>
 1. its serial port, on the line connecting router0 and router2, has IP address: 192.168.1.253/30</br>
    For me its a DTE serial 2/0 port, so I typed in commands</br>
-   ![6.1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%206%20substep%20code%201.JPG)</br>
+   ![6.1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/step-6-substep-code-1.JPG)</br>
 2. its serial port, on the line connecting router1 and router2, has IP address: 192.168.1.245/30</br>
    For me its a DCE serial 3/0 port, so I typed in commands</br>
-   ![6.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%206%20substep%20code%202.JPG)</br>
+   ![6.2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/step-6-substep-code-2.JPG)</br>
 
 # STEP8: Configure RIP Protocol</br>
 1. For this one should get into global configuration mode first, that's by "conf t"</br>
 2. Then "router rip"</br>
 3. Then add the respective networks for each router </br>
 Router 0:</br>
-![rip r0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%208%20router0.JPG)</br>
+![rip r0](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/step-8-router0.JPG)</br>
 Router1:</br>
-![rip r1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%208%20router1.JPG)</br>
+![rip r1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/step-8-router1.JPG)</br>
 Router2:</br>
-![rip r2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/step%208%20router2.JPG)</br>
+![rip r2](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/step-8-router2.JPG)</br>
 
 
 The question arises in how we determine the networks for each of these routers.
@@ -249,7 +249,7 @@ Click the Envelope Icon and then click on PC0 and PC1 (red arrow)
 </br> Then in play controls click capture forward to see the packet traverse route1. </br>
 at the end of it you should get an event list encircled in pink below and the successful status message highlighted by yellow arrow. 
 </br>
-![sim route1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES%20-%20RIP/simulation-pic1.JPG)
+![sim route1](https://github.com/norac1243/RIP-Protocol/blob/main/PICTURES-RIP/simulation-pic1.png)
 
 
 </br>
